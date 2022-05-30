@@ -1,0 +1,20 @@
+<h1>Sign in</h1>
+
+<%= flash.now[:notice] if flash.now[:notice] %>
+<%= form_with url: sessions_path, local: true do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= email_field_tag :email,
+      params[:email],
+      placeholder: 'Ingrese su Email',
+      required: true %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password,
+      params[:password], 
+      placeholder: 'Ingrese su contraseña',
+      required: true %>
+  </div>
+  <%= submit_tag 'Sign in' %>
+<% end %>
