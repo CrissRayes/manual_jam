@@ -2,9 +2,9 @@
 <br>
 
 <% if current_user %>
-  <%= link_to('Logout', session_path(current_user), method: :delete) %>
+  <%= link_to 'Cerrar Sesión', session_path(current_user), method: :delete %>
 <% else %>
-  <%= link_to('Login', new_session_path) %>
+  <%= link_to('Iniciar Sesión', new_session_path) %>
 <% end %>
   
 
